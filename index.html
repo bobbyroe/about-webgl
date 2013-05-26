@@ -3,9 +3,221 @@
 <head>
     <meta charset='UTF-8'/>
     <title>About WebGL</title>
+    <link rel="stylesheet" href="css/reveal.min.css">
+	<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+	<!--
+	<style type="text/css">
+		h2 {
+			margin-bottom:100px !important;
+		}
+	</style>
+	-->
 </head>
 <body>
-	Hi.
+	<!-- <div class="reveal">
+	    <div class="slides">
+	        <section>Single Horizontal Slide</section>
+	        <section>
+	            <section>Vertical Slide 1</section>
+	            <section>Vertical Slide 2</section>
+	        </section>
+	    </div>
+	</div> -->
+	<div class="reveal">
+	    <div class="slides">
+	        <section>
+	        	<h2>WebGL</h2>
+
+	        	A highly portable, low-level graphics library <br>
+	        	for the web
+	        </section>
+
+	        <section><h2>Introduction</h2> 
+	        	About me <br>
+	        	(R&amp;D Ventures + Background)
+	        </section>
+
+	        <section>
+	        	<h2>What is it?</h2>
+	        	Based on OpenGL ES 2.0, maps closely to the GPU
+	        </section>
+
+	        <section>
+	        	<h2>Not a talk about</h2>
+
+	        	 3D content creation or 3D js libraries, like Threee.js
+	        </section>
+
+	        <section>
+	        	<h2>Overview</h2>
+	        	* Introducing the WebGL DOM API (library)
+	         	* some GLSL examples
+	         	* simple usage of vectors &amp; matrices
+	         	* what next?
+	         	* links
+	        </section>
+
+	        <section>
+	        	<h2>***Intro to the DOM API***</h2>
+	        	"lightning history"
+	        </section>
+
+	        <section>
+	        	<h2>some concepts</h2>
+	        	Stuff I wish I knew win I began messing around
+	        </section>
+
+	        <section>
+	        	<h2>It's NOT simple like &lt;canvas&gt;</h2>
+	        	ex: context.drawThis(); // done.
+	        </section>
+
+	        <section>
+	        	an understanding of OpenGL ES 2.0 is helpful <br>
+	        	    • buffers, switches, state, load-compile-link-use, etc …
+	        </section>
+
+	        <section>
+	        	<h2>better debugging tools</h2>
+	        </section>
+
+	        <section>
+	        	<h2>The graphics pipeline</h2>
+	        	(diagram) - “more later”
+	        </section>
+
+	        <section>
+	        	<h2>basic workflow</h2>
+	        	get a context / create *shaders &amp; program / *VBOs / draw
+	        </section>
+
+	        <section>
+	        	<h2>***some GLSL examples***</h2>
+	        </section>
+
+	        <section>
+	        	<h2>what is it?</h2>
+	        	like c / c++ but with helpers for CG 
+	        	(built-in matrices / vectors / functions)
+
+	        	gl_Position &amp; gl_FragColor</section>
+
+	        <section>
+	        	<h2>(pipeline)</h2>
+	        	vertex + fragment shaders
+	        </section>
+	        	
+	        <section>
+	        	<h2>lighting, normals, texture coords (?)</h2>
+	        </section>
+
+	        <section>
+	        	poor error feedback <br>
+	        	ex: does not like to mix ints &amp; floats
+	        </section>
+
+	        <section>
+	        	<h2>***simple usage of vectors &amp; matrices***</h2>
+	        </section>
+
+	        <section>
+	        	<h2>Vectors</h2>
+	        	"Arrows:" can be points or displacements (direction / magnitude)
+	        </section>
+
+	        <section>
+	        	<h2>Unit Circle</h2>
+	        	x --“... a circle with a radius of 1.0 is also a form of 1. It’s a rotating 1. So you can multiply something by this unit circle and in a way it’s kind of like multiplying by 1 except 
+
+	        	magic happens and things rotate.”
+	        </section>
+
+	        <section>
+	        	<h2>4x4 matrix magic</h2>
+	        		types &amp; operations <br>
+	            	model, projection &amp; perspective (also identity)
+	        </section>
+
+	        <section>
+	        	<h2>model</h2>
+	        	translate + rotate + scale + multiply
+	        </section>
+
+	        <section>
+	        	<h2>projection</h2>
+	        	from pixels to clipspace (could be to many other ex: curve spaces)
+	        </section>
+
+	        <section>
+	        	<h2>perspective</h2>
+	        	fit visible world (frustum into clip space) (tangent)?
+	        </section>
+
+	        <section>
+	        	<h2>***what next?***</h2>
+	        	“WebGL can make graphics &amp; interactive and introspective by default.” - acko.net
+	        </section>
+	        	
+	        <section>
+	        	<h2>Storytelling &amp; presentation</h2> 
+	        	visualisations, image processing
+	        </section>
+
+	        <section>
+	        	<h2>games</h2>
+	        	ray casting / clickable objects, physics
+	        </section>
+
+	        <section>
+	        	<h2>art / demos</h2> 
+	        	particle effects,
+	        </section>
+
+	        <section>
+	        <h2>***links***</h2>
+	        <ul>
+	           <li>watch these: <a href="https://www.udacity.com/course/cs291">www.udacity.com/course/cs291</a></li>
+	           <li>and this: <a href="http://games.greggman.com/game/webgl-how-it-works">games.greggman.com/game/webgl-how-it-works</a></li>
+	           <li><a href="http://learningwebgl.com/blog/?page_id=1217">learningwebgl.com/blog/?page_id=1217</a></li>
+	           <li><a href="https://www.shadertoy.com">www.shadertoy.com</a></li>
+	           <li><a href="http://acko.net/blog/making-mathbox">acko.net/blog/making-mathbox</a> (webgl usage)</li>
+	       </ul>
+	        </section>
+
+	        <section>
+	        <h2>stuff to explore:</h2>
+	        <ul>
+	        	<li>post-processing (images effects w/ FBOs)</li>
+	        	<li>shadows</li>
+	        	<li>more shader programming</li>
+	        	<li>clickable stuff - ray-casting</li>
+	        	<li>particle effects</li>
+	        	<li>optimisations </li>
+	        </ul>
+	        </section>
+	    </div>
+
+	</div>
+
+	<script src="js/reveal.min.js"></script>
+	<script>
+
+		// see https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			// Display controls in the bottom right corner
+    		controls: false,
+    		// Transition style
+    		transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+		    // Transition speed
+		    transitionSpeed: 'default', // default/fast/slow
+		    // Display a presentation progress bar
+    		progress: true,
+    		// Push each slide change to the browser history
+    		history: true
+
+		});
+
+	</script>
 </body>
 </html>
 

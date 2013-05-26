@@ -3,9 +3,8 @@
 
 About WebGL Talk.
 
-Learning some basic markdown here.
 
-###smaller header
+###Init WebGL example
 
 ```js
 initWGL: function () {
