@@ -5,31 +5,21 @@
     <title>About WebGL</title>
     <link rel="stylesheet" href="css/reveal.min.css">
 	<link rel="stylesheet" href="css/theme/simple.css" id="theme">
-	<!--
+	
 	<style type="text/css">
-		h2 {
-			margin-bottom:100px !important;
+		section[data-state=section1go] canvas {
+			background-color: rgba(255, 255, 255, 1.0) !important;
 		}
 	</style>
-	-->
+	
 </head>
-<body>
-	<!-- <div class="reveal">
-	    <div class="slides">
-	        <section>Single Horizontal Slide</section>
-	        <section>
-	            <section>Vertical Slide 1</section>
-	            <section>Vertical Slide 2</section>
-	        </section>
-	    </div>
-	</div> -->
+<body onload="section1();">
 	<div class="reveal">
 	    <div class="slides">
-	        <section>
-	        	<h2>WebGL</h2>
-
-	        	A highly portable, low-level graphics library <br>
-	        	for the web
+	        <section data-state="section1go">
+	        	<h2>About WebGL</h2>
+	        	<canvas id="1" width="500" height="500"></canvas>
+	        	
 	        </section>
 
 	        <section><h2>Introduction</h2> 
@@ -217,7 +207,51 @@
 
 		});
 
+		// Reveal.addEventListener( 'section1go', function() {
+		//     if (typeof gl === 'undefined') {
+		//     	section1();
+		//     }
+		// }, false );
+
 	</script>
+
+	<!-- section 1-->
+	<script type="text/javascript" src="js/webgl-utils.js"></script>
+	<script type="text/javascript" src="js/section1.js"></script>
+	<script id="s1-vertex-shader" type="x-shader/x-vertex">
+	    attribute vec4 a_position;
+	    attribute vec2 a_tex_coord;
+	    attribute vec4 a_color;
+
+	    uniform mat4 u_matrix;
+
+	    varying vec4 v_color;
+	    varying vec2 v_texture_coord;
+
+	    void main() {
+
+	      gl_Position = u_matrix * a_position;
+
+	      v_color = a_color;
+	      v_texture_coord = a_tex_coord;
+	    }
+	</script>
+	<!-- fragment shader -->
+	<script id="s1-fragment-shader" type="x-shader/x-fragment">
+	    precision mediump float;
+
+	    uniform sampler2D u_sampler;
+
+	    varying vec4 v_color;
+	    varying vec2 v_texture_coord;
+
+	    void main() {
+
+	       vec4 ambient_color = vec4(0.9, 0.9, 0.9, 1.0);
+	       gl_FragColor = ambient_color * texture2D(u_sampler, v_texture_coord);
+	    }
+	</script>
+
 </body>
 </html>
 
