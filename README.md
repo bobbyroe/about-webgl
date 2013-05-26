@@ -2,7 +2,7 @@
 
 
 About WebGL Talk.
-
+[Presentation](http://bobbyroe.com/wgl/about)
 
 ###Init WebGL example
 
