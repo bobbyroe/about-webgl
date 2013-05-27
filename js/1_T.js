@@ -12,9 +12,10 @@ function section1 () {
 
     if (!gl) {
         return;
-    } else {
-        console.log('got it');
-    }
+    } 
+    // else {
+    //     console.log('got it');
+    // }
 
     gl.viewportWidth = canvas.width;
     gl.viewportHeight = canvas.height;
@@ -30,8 +31,9 @@ function section1 () {
 
     // look up where the vertex data needs to go.
     var positionLocation = gl.getAttribLocation(program, "a_position");
+    
     var textureLocation = gl.getAttribLocation(program, "a_tex_coord");
-    var colorLocation = gl.getAttribLocation(program, "a_color");
+    // var colorLocation = gl.getAttribLocation(program, "a_color");
 
     // lookup uniforms
     var matrixLocation = gl.getUniformLocation(program, "u_matrix");
@@ -263,7 +265,7 @@ function section1 () {
     // Draw the scene.
     function drawScene() {
         gl.viewport(0, 0, gl.viewportWidth, gl.viewportHeight);
-        angleInDegrees -= 2;
+        //angleInDegrees -= 2;
         rotation[1] = degreesToRadians(angleInDegrees*0.5);
         // rotation[2] = degreesToRadians(angleInDegrees);
 
@@ -299,6 +301,7 @@ function section1 () {
 
         // Draw the geometry.
         gl.drawArrays(gl.TRIANGLES, 0, num_tris);
+        console.log('drawing ...');
     }
 } // end main()
 

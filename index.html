@@ -19,95 +19,111 @@
 	        <section data-state="section1go">
 	        	<h2>About WebGL</h2>
 	        	<canvas id="1" width="500" height="500"></canvas>
-	        	
+	        	Bobby Roe
 	        </section>
-
-	        <section><h2>Introduction</h2> 
-	        	About me <br>
-	        	(R&amp;D Ventures + Background)
+			
+			<section>
+	        	(Demo Reel)
 	        </section>
 
 	        <section>
 	        	<h2>What is it?</h2>
-	        	Based on OpenGL ES 2.0, maps closely to the GPU
+	        	<p class="fragment">Based on OpenGL ES 2.0</p>
+	        	<p class="fragment">(maps closely to the GPU)</p>
 	        </section>
 
-	        <section>
-	        	<h2>Not a talk about</h2>
-
-	        	 3D content creation or 3D js libraries, like Threee.js
+			<section>
+	        	(Gregg Tavares's Frag shader illustration)
 	        </section>
 
 	        <section>
 	        	<h2>Overview</h2>
-	        	* Introducing the WebGL DOM API (library)
-	         	* some GLSL examples
-	         	* simple usage of vectors &amp; matrices
-	         	* what next?
-	         	* links
+	        	<ul>
+	        		<li class="fragment">Intro to the WebGL DOM API</li>
+	        		<li class="fragment">vectors &amp; matrices</li> <!-- blaze thru Greggman's stuff here -->
+		         	<li class="fragment">GLSL examples</li> <!-- my examples here -->
+		         	<li class="fragment">do stuff</li>
+		         	<li class="fragment">references</li>
+	         	</ul>
 	        </section>
 
+			<!-- part 1 -->
 	        <section>
-	        	<h2>***Intro to the DOM API***</h2>
-	        	"lightning history"
-	        </section>
-
-	        <section>
-	        	<h2>some concepts</h2>
-	        	Stuff I wish I knew win I began messing around
-	        </section>
-
-	        <section>
-	        	<h2>It's NOT simple like &lt;canvas&gt;</h2>
-	        	ex: context.drawThis(); // done.
-	        </section>
-
-	        <section>
-	        	an understanding of OpenGL ES 2.0 is helpful <br>
-	        	    • buffers, switches, state, load-compile-link-use, etc …
-	        </section>
-
-	        <section>
-	        	<h2>better debugging tools</h2>
-	        </section>
-
-	        <section>
-	        	<h2>The graphics pipeline</h2>
-	        	(diagram) - “more later”
-	        </section>
-
-	        <section>
-	        	<h2>basic workflow</h2>
-	        	get a context / create *shaders &amp; program / *VBOs / draw
-	        </section>
-
-	        <section>
-	        	<h2>***some GLSL examples***</h2>
-	        </section>
-
-	        <section>
-	        	<h2>what is it?</h2>
-	        	like c / c++ but with helpers for CG 
-	        	(built-in matrices / vectors / functions)
-
-	        	gl_Position &amp; gl_FragColor</section>
-
-	        <section>
-	        	<h2>(pipeline)</h2>
-	        	vertex + fragment shaders
-	        </section>
+	        	<h2>Intro</h2>
 	        	
-	        <section>
-	        	<h2>lighting, normals, texture coords (?)</h2>
+	        	(much more involved than other other graphics libraries <br>
+				massively parallel &amp; awesome)
+			
 	        </section>
 
 	        <section>
-	        	poor error feedback <br>
-	        	ex: does not like to mix ints &amp; floats
+				<section>
+					<!-- lightning history -->
+					<p>2006</p>
+		        	<p class="fragment">(Photo of Vlad)</p>
+		        	<p class="fragment">(Photo of FF 4)</p>
+		        	<p class="fragment">(Photo of teapot)</p> <!-- WebGL example? -->
+		        </section>
+		        <section>
+					<p>2009</p>
+		        	<p class="fragment">(Photo of Khronos)</p>
+		        	<p class="fragment">(Photo of Chrome body)</p>
+		        	<p class="fragment">(Photo of Three.js)</p> <!-- WebGL example? -->
+		        </section>
 	        </section>
 
 	        <section>
-	        	<h2>***simple usage of vectors &amp; matrices***</h2>
+	        	<section>
+	        		<h2>some concepts</h2>
+	        	</section>
+	        	<section>
+		        	an understanding of OpenGL ES 2.0 is helpful <br>
+		        	• buffers, switches, state, load-compile-link-use, etc …
+	        	</section>
+	        	<section>
+	        		The graphics pipeline <br>
+	        		(diagram) - “more later”
+	        	</section>
+	        	<section>
+	        		It's NOT simple like &lt;canvas&gt; <br>
+	        		ex: context.drawThis(); // done.
+	        	</section>
+	        	<!-- <section>
+	        		needs better debugging tools
+	        	</section> -->
+	        	<section>
+	        		<p>(code: bare minimum WebGL)</p>
+	        		<a class="fragment" href="http://games.greggman.com/game/webgl-fundamentals/">Gregg Tavares (Greggman)'s lessons</a>
+	        	</section>
+	        	<section>
+	        		<p>Essentials of 3D Graphics</p>
+	        		<a class="fragment" href="https://www.udacity.com/course/cs291">Eric Haines Class on Udacity</a>
+	        	</section>
+	        </section>
+
+		        <!-- <section>
+		        	<h2>basic workflow</h2>
+		        	<p class="fragment">get a context</p>
+		        	<p class="fragment">create *shaders &amp; program</p>
+		        	<p class="fragment">VBOs (&amp; IBOs)</p>
+		        	<p class="fragment">draw</p>
+		        </section>
+				
+				<section>
+					(image of scary WebGL code)
+				</section>
+
+				<section>
+					Examples <br>
+					(renderer + objects)
+				</section> -->
+
+
+
+			<!-- part 2 -->
+	        <section>
+	        	<p class="fragment">simple usage of</p>
+	        	<h2>vectors &amp; matrices</h2>
 	        </section>
 
 	        <section>
@@ -117,73 +133,131 @@
 
 	        <section>
 	        	<h2>Unit Circle</h2>
-	        	x --“... a circle with a radius of 1.0 is also a form of 1. It’s a rotating 1. So you can multiply something by this unit circle and in a way it’s kind of like multiplying by 1 except 
-
+	        	“... a circle with a radius of 1.0 is also a form of 1. It’s a rotating 1. So you can multiply something by this unit circle and in a way it’s kind of like multiplying by 1 except <br>
 	        	magic happens and things rotate.”
 	        </section>
 
+			<section>
+		        <section>
+		        	<h2>4x4 matrix magic</h2>
+		        	<!-- types &amp; operations: model, projection &amp; perspective (also identity) -->
+		        </section>
+		        <section>
+		        	<h2>model</h2>
+		        	translate + rotate + scale + multiply
+		        </section>
+		        <section>
+		        	<h2>projection</h2>
+		        	from pixels to clipspace <br>
+		        	(could be to many other ex: curve spaces)
+		        </section>
+		        <section>
+		        	<h2>perspective</h2>
+		        	fit visible world (frustum into clip space) (tangent)?
+		        </section>
+			</section>
+
+
+
+			<!-- part 3 -->
 	        <section>
-	        	<h2>4x4 matrix magic</h2>
-	        		types &amp; operations <br>
-	            	model, projection &amp; perspective (also identity)
+	        	<h2>GLSL</h2>
+	        	<p class="fragment">some examples</p>
+	        	the programmable part of the GL pipeline <br>
+				this is where the magic is
+
 	        </section>
 
 	        <section>
-	        	<h2>model</h2>
-	        	translate + rotate + scale + multiply
+	        	<h2>what is it?</h2>
+	        	like c / c++ with helpers for CG <br>
+	        	<p class="fragment">(built-in matrices / vectors / functions)</p>
+	        	<p class="fragment">gl_Position &amp; gl_FragColor</p>
 	        </section>
 
 	        <section>
-	        	<h2>projection</h2>
-	        	from pixels to clipspace (could be to many other ex: curve spaces)
-	        </section>
-
-	        <section>
-	        	<h2>perspective</h2>
-	        	fit visible world (frustum into clip space) (tangent)?
-	        </section>
-
-	        <section>
-	        	<h2>***what next?***</h2>
-	        	“WebGL can make graphics &amp; interactive and introspective by default.” - acko.net
+	        	<section><h2>(pipeline)</h2></section>
+		        <section>
+		        	vertex + fragment shaders
+		        	<p class="fragment">The programable part of the piprline</p>
+		        </section>
+		        <section>(greggman images)</section>
 	        </section>
 	        	
 	        <section>
-	        	<h2>Storytelling &amp; presentation</h2> 
-	        	visualisations, image processing
+		        <section>
+		        	(texture coords, normals &amp; lighting)
+		        </section>
+		        <section>
+		        	load texture example
+		        </section>
+		        <section>
+		        	normals &amp; lighting example
+		        </section>
+		        <section>
+		        	other effects (toon)
+		        </section>
+		    </section>
+
+	        <section>
+	        	poor error feedback <br>
+	        	ex: does not like to mix ints &amp; floats
+	        </section>
+
+
+
+			<!-- part 4 -->
+			<section>
+		        <section>
+	        		<h2>Do stuff</h2>
+		        	<p class="fragment">“WebGL can make graphics &amp; interactive and introspective by default.” - acko.net</p>
+		        </section>
+		        	
+		        <section>
+		        	<h2>Storytelling &amp; presentation</h2> 
+		        	visualisations, image processing
+		        </section>
+
+		        <section>
+		        	<h2>games</h2>
+		        	ray casting / clickable objects, physics
+		        </section>
+
+		        <section>
+		        	<h2>art / demos</h2> 
+		        	particle effects
+		        </section>
+			</section>
+
+
+
+			<!-- part 5 -->
+	        <section>
+		        <h2>links</h2>
+		        <ul>
+		           <li>watch these: <a href="https://www.udacity.com/course/cs291">www.udacity.com/course/cs291</a></li>
+		           <li>and this: <a href="http://games.greggman.com/game/webgl-how-it-works">games.greggman.com/game/webgl-how-it-works</a></li>
+		           <li><a href="http://learningwebgl.com/blog/?page_id=1217">learningwebgl.com/blog/?page_id=1217</a></li>
+		           <li><a href="https://www.shadertoy.com">www.shadertoy.com</a></li>
+		           <li><a href="http://acko.net/blog/making-mathbox">acko.net/blog/making-mathbox</a> (webgl usage)</li>
+		       </ul>
 	        </section>
 
 	        <section>
-	        	<h2>games</h2>
-	        	ray casting / clickable objects, physics
+		        <h2>stuff to explore:</h2>
+		        <ul>
+		        	<li>post-processing (images effects w/ FBOs)</li>
+		        	<li>shadows</li>
+		        	<li>more shader programming</li>
+		        	<li>clickable stuff - ray-casting</li>
+		        	<li>particle effects</li>
+		        	<li>optimisations </li>
+		        </ul>
 	        </section>
 
 	        <section>
-	        	<h2>art / demos</h2> 
-	        	particle effects,
-	        </section>
-
-	        <section>
-	        <h2>***links***</h2>
-	        <ul>
-	           <li>watch these: <a href="https://www.udacity.com/course/cs291">www.udacity.com/course/cs291</a></li>
-	           <li>and this: <a href="http://games.greggman.com/game/webgl-how-it-works">games.greggman.com/game/webgl-how-it-works</a></li>
-	           <li><a href="http://learningwebgl.com/blog/?page_id=1217">learningwebgl.com/blog/?page_id=1217</a></li>
-	           <li><a href="https://www.shadertoy.com">www.shadertoy.com</a></li>
-	           <li><a href="http://acko.net/blog/making-mathbox">acko.net/blog/making-mathbox</a> (webgl usage)</li>
-	       </ul>
-	        </section>
-
-	        <section>
-	        <h2>stuff to explore:</h2>
-	        <ul>
-	        	<li>post-processing (images effects w/ FBOs)</li>
-	        	<li>shadows</li>
-	        	<li>more shader programming</li>
-	        	<li>clickable stuff - ray-casting</li>
-	        	<li>particle effects</li>
-	        	<li>optimisations </li>
-	        </ul>
+		        <h2>Thank You</h2>
+		        <a href="#/">back to intro</a>
 	        </section>
 	    </div>
 
@@ -195,7 +269,7 @@
 		// see https://github.com/hakimel/reveal.js#configuration
 		Reveal.initialize({
 			// Display controls in the bottom right corner
-    		controls: false,
+    		controls: true,
     		// Transition style
     		transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
 		    // Transition speed
@@ -203,7 +277,11 @@
 		    // Display a presentation progress bar
     		progress: true,
     		// Push each slide change to the browser history
-    		history: true
+    		history: true,
+    		// Apply a 3D roll to links on hover
+    		rollingLinks: false,
+    		// Enable slide navigation via mouse wheel
+    		mouseWheel: false
 
 		});
 
@@ -217,22 +295,22 @@
 
 	<!-- section 1-->
 	<script type="text/javascript" src="js/webgl-utils.js"></script>
-	<script type="text/javascript" src="js/section1.js"></script>
+	<script type="text/javascript" src="js/1_T.js"></script>
 	<script id="s1-vertex-shader" type="x-shader/x-vertex">
 	    attribute vec4 a_position;
 	    attribute vec2 a_tex_coord;
-	    attribute vec4 a_color;
+	    // attribute vec4 a_color;
 
 	    uniform mat4 u_matrix;
 
-	    varying vec4 v_color;
+	    // varying vec4 v_color;
 	    varying vec2 v_texture_coord;
 
 	    void main() {
 
 	      gl_Position = u_matrix * a_position;
 
-	      v_color = a_color;
+	      // v_color = a_color;
 	      v_texture_coord = a_tex_coord;
 	    }
 	</script>
@@ -242,12 +320,12 @@
 
 	    uniform sampler2D u_sampler;
 
-	    varying vec4 v_color;
+	    // varying vec4 v_color;
 	    varying vec2 v_texture_coord;
 
 	    void main() {
 
-	       vec4 ambient_color = vec4(0.9, 0.9, 0.9, 1.0);
+	       vec4 ambient_color = vec4(0.9, 0.91, 0.92, 1.0);
 	       gl_FragColor = ambient_color * texture2D(u_sampler, v_texture_coord);
 	    }
 	</script>
