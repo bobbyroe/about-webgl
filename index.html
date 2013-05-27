@@ -23,7 +23,8 @@
 	        </section>
 			
 			<section>
-	        	(Demo Reel)
+	        	<!-- (Demo Reel) -->
+	        	<iframe src="http://player.vimeo.com/video/15575038" width="800" height="448" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 	        </section>
 
 	        <section>
@@ -33,14 +34,16 @@
 	        </section>
 
 			<section>
-	        	(Gregg Tavares's Frag shader illustration)
+				<h2 class="fragment">What it's not</h2>
+	        	<p>A 3D engine</p>
 	        </section>
 
 	        <section>
 	        	<h2>Overview</h2>
 	        	<ul>
 	        		<li class="fragment">Intro to the WebGL DOM API</li>
-	        		<li class="fragment">vectors &amp; matrices</li> <!-- blaze thru Greggman's stuff here -->
+	        		<li class="fragment">2D / 3D, whatever</li>
+	        		<li class="fragment">Bring your own matrices</li> <!-- blaze thru Greggman's stuff here -->
 		         	<li class="fragment">GLSL examples</li> <!-- my examples here -->
 		         	<li class="fragment">do stuff</li>
 		         	<li class="fragment">references</li>
@@ -50,39 +53,28 @@
 			<!-- part 1 -->
 	        <section>
 	        	<h2>Intro</h2>
-	        	
 	        	(much more involved than other other graphics libraries <br>
 				massively parallel &amp; awesome)
-			
 	        </section>
 
-	        <section>
-				<section>
-					<!-- lightning history -->
-					<p>2006</p>
-		        	<p class="fragment">(Photo of Vlad)</p>
-		        	<p class="fragment">(Photo of FF 4)</p>
-		        	<p class="fragment">(Photo of teapot)</p> <!-- WebGL example? -->
-		        </section>
-		        <section>
+	        
+			<section>
+				<!-- lightning history -->
+				<p>2006</p>
+	        	<p class="fragment">(Photo of Vlad)</p>
+	        	<p class="fragment">(Photo of FF 4)</p>
+	        	<p class="fragment">(Photo of teapot)</p> <!-- WebGL example? -->
+	        </section>
+		       <!--  <section>
 					<p>2009</p>
 		        	<p class="fragment">(Photo of Khronos)</p>
 		        	<p class="fragment">(Photo of Chrome body)</p>
-		        	<p class="fragment">(Photo of Three.js)</p> <!-- WebGL example? -->
-		        </section>
-	        </section>
+		        	<p class="fragment">(Photo of Three.js)</p>
+		        </section> -->
 
 	        <section>
 	        	<section>
 	        		<h2>some concepts</h2>
-	        	</section>
-	        	<section>
-		        	an understanding of OpenGL ES 2.0 is helpful <br>
-		        	• buffers, switches, state, load-compile-link-use, etc …
-	        	</section>
-	        	<section>
-	        		The graphics pipeline <br>
-	        		(diagram) - “more later”
 	        	</section>
 	        	<section>
 	        		It's NOT simple like &lt;canvas&gt; <br>
@@ -96,75 +88,76 @@
 	        		<a class="fragment" href="http://games.greggman.com/game/webgl-fundamentals/">Gregg Tavares (Greggman)'s lessons</a>
 	        	</section>
 	        	<section>
+	        		The graphics pipeline <br>
+	        		(diagram) - “more later”
+	        	</section>
+	        	<section>
+		        	an understanding of OpenGL ES 2.0 is helpful <br>
+		        	• buffers, switches, state, load-compile-link-use, etc …
+	        	</section>
+	        	<section>
 	        		<p>Essentials of 3D Graphics</p>
 	        		<a class="fragment" href="https://www.udacity.com/course/cs291">Eric Haines Class on Udacity</a>
-	        	</section>
+	        	</section>	
 	        </section>
-
-		        <!-- <section>
-		        	<h2>basic workflow</h2>
-		        	<p class="fragment">get a context</p>
-		        	<p class="fragment">create *shaders &amp; program</p>
-		        	<p class="fragment">VBOs (&amp; IBOs)</p>
-		        	<p class="fragment">draw</p>
-		        </section>
-				
-				<section>
-					(image of scary WebGL code)
-				</section>
-
-				<section>
-					Examples <br>
-					(renderer + objects)
-				</section> -->
 
 
 
 			<!-- part 2 -->
 	        <section>
-	        	<p class="fragment">simple usage of</p>
-	        	<h2>vectors &amp; matrices</h2>
+	        	<h2>2D / 3D; whatever</h2>
 	        </section>
 
-	        <section>
-	        	<h2>Vectors</h2>
-	        	"Arrows:" can be points or displacements (direction / magnitude)
-	        </section>
-
-	        <section>
-	        	<h2>Unit Circle</h2>
-	        	“... a circle with a radius of 1.0 is also a form of 1. It’s a rotating 1. So you can multiply something by this unit circle and in a way it’s kind of like multiplying by 1 except <br>
-	        	magic happens and things rotate.”
+	     	<section>
+	        	<h2>basic workflow</h2>
+	        	<p class="fragment">get a context</p>
+	        	<p class="fragment">create *shaders &amp; program</p>
+	        	<p class="fragment">VBOs (&amp; IBOs)</p>
+	        	<p class="fragment">draw</p>
 	        </section>
 
 			<section>
-		        <section>
-		        	<h2>4x4 matrix magic</h2>
-		        	<!-- types &amp; operations: model, projection &amp; perspective (also identity) -->
-		        </section>
-		        <section>
-		        	<h2>model</h2>
-		        	translate + rotate + scale + multiply
-		        </section>
-		        <section>
-		        	<h2>projection</h2>
-		        	from pixels to clipspace <br>
-		        	(could be to many other ex: curve spaces)
-		        </section>
-		        <section>
-		        	<h2>perspective</h2>
-		        	fit visible world (frustum into clip space) (tangent)?
-		        </section>
+				2D Example (triangle)
+				<!-- (renderer + objects) -->
+			</section>
+
+			<section>
+				(triangle animated)
+				<!-- (renderer + objects) -->
 			</section>
 
 
 
 			<!-- part 3 -->
 	        <section>
+	        	<h2>Bring your own matrices</h2>
+	        	<p class="fragment">4x4 matrix magic</p>
+	        	<!-- types &amp; operations: model, projection &amp; perspective (also identity) -->
+	        </section>
+
+	        <section>
+	        	<h2>model</h2>
+	        	translate + rotate + scale + multiply
+	        </section>
+
+	        <section>
+	        	<h2>projection</h2>
+	        	from pixels to clipspace
+	        </section>
+
+	        <section>
+	        	<h2>perspective</h2>
+	        	fit visible world (frustum into clip space) (tangent)?
+	        </section>
+
+
+
+			<!-- part 4 -->
+	        <section>
 	        	<h2>GLSL</h2>
 	        	<p class="fragment">some examples</p>
-	        	the programmable part of the GL pipeline <br>
-				this is where the magic is
+	        	<p class="fragment">the programmable part of the GL pipeline <br>
+				this is where the magic is</p>
 
 	        </section>
 
@@ -179,7 +172,7 @@
 	        	<section><h2>(pipeline)</h2></section>
 		        <section>
 		        	vertex + fragment shaders
-		        	<p class="fragment">The programable part of the piprline</p>
+		        	<p class="fragment">The programable part of the pipeline</p>
 		        </section>
 		        <section>(greggman images)</section>
 	        </section>
@@ -206,13 +199,16 @@
 
 
 
-			<!-- part 4 -->
+			<!-- part 5 -->
 			<section>
 		        <section>
 	        		<h2>Do stuff</h2>
 		        	<p class="fragment">“WebGL can make graphics &amp; interactive and introspective by default.” - acko.net</p>
 		        </section>
-		        	
+		        
+		        <section>
+		        	Use <a href="http://threejs.org/">Three.js</a>
+		        </section>
 		        <section>
 		        	<h2>Storytelling &amp; presentation</h2> 
 		        	visualisations, image processing
@@ -231,7 +227,7 @@
 
 
 
-			<!-- part 5 -->
+			<!-- part 6 -->
 	        <section>
 		        <h2>links</h2>
 		        <ul>
