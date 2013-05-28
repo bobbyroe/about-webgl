@@ -10,6 +10,29 @@
 		section[data-state=section1go] canvas {
 			background-color: rgba(255, 255, 255, 1.0) !important;
 		}
+		.globe .state-background {
+			background:url(images/shots/globe.jpg) 50% 0 no-repeat #000;
+		}
+		.goo_game .state-background {
+			background:url(images/shots/goo.jpg) 50% 0 no-repeat #000;
+		}
+		.code .state-background {
+			background:url(images/shots/code.jpg) 50% 0 no-repeat #000;
+		}
+		
+		.black p {
+			color:#e0e0e0 !important;
+		}
+		.black .state-background {
+			background-color:#000;
+		}
+		img {
+			border:none !important;
+			background: none !important;
+		}
+		img:hover {
+			box-shadow:none;
+		}
 	</style>
 	
 </head>
@@ -32,6 +55,40 @@
 	        	<p class="fragment">Based on OpenGL ES 2.0</p>
 	        	<p class="fragment">(maps closely to the GPU)</p>
 	        </section>
+
+			<section>
+				<section>
+		        	
+					<aside class="notes">
+				        what you can do with it <br>
+		        		powerful tool for interactive storytelling
+				    </aside>
+					
+					<a href="http://www.ro.me/"><img src="images/shots/rome.jpg" alt="ro.me"></a>
+		        </section>
+		        <section data-state="globe">
+		        	<aside class="notes">
+				        visualisations
+				    </aside>
+		        	<a href="http://data-arts.appspot.com/globe/"><img src="images/blank.gif" width="800" height="800" alt="world population"></a>
+		        </section>
+		        <section>		        	
+		        	<a href="http://open-3d-viewer.googlecode.com/svn/trunk/web/index.html#nav=2.83,4.78,197.5"><img src="images/shots/cow.jpg" alt="cow"></a>
+		        </section>
+		        <section data-state="goo_game">
+		        	<aside class="notes">
+				        games
+				    </aside>
+		        	<a href="http://www.gooengine.com/demofiles/pearl-boy/"><img src="images/blank.gif" alt="goo game"></a>
+		        </section>
+		        <section>
+		        	<a href="https://turbulenz.com/"><img src="images/shots/tz.jpg" alt="turbulenz"></a>
+		        </section>
+		        <section>
+		        	<a href="http://acko.net/files/on-webgl/whittaker/raytrace-creepy.html"><img src="images/shots/fractal.jpg" alt="fractal"></a>
+		        	<p>The web has a history of transformative changes. CSS gave us real web design, Flash gave us ubiquitous video, Firebug gave us Web Inspectors, jQuery gave us non-painful DOM manipulation, and so on. None of these ideas were new in computing when they debuted, the web merely adapted to fill a need. WebGL is an idea in a similar vein, a base platform for an ecosystem of specialized frameworks on top. - <a href="http://acko.net/blog/on-webgl/">Steven Wittens</a></p>
+		        </section>
+		    </section>
 
 			<section>
 				<h2 class="fragment">What it's not</h2>
@@ -58,12 +115,15 @@
 	        </section>
 
 	        
-			<section>
-				<!-- lightning history -->
+			<section data-state="black">
+				<aside class="notes">
+			       lightning history
+			    </aside>
+			    <a href="../demo/teapot.html"><img src="images/teapot.jpg" alt="Utah teapot"></a>
 				<p>2006</p>
 	        	<p class="fragment">(Photo of Vlad)</p>
 	        	<p class="fragment">(Photo of FF 4)</p>
-	        	<p class="fragment">(Photo of teapot)</p> <!-- WebGL example? -->
+	        	
 	        </section>
 		       <!--  <section>
 					<p>2009</p>
@@ -83,9 +143,8 @@
 	        	<!-- <section>
 	        		needs better debugging tools
 	        	</section> -->
-	        	<section>
-	        		<p>(code: bare minimum WebGL)</p>
-	        		<a class="fragment" href="http://games.greggman.com/game/webgl-fundamentals/">Gregg Tavares (Greggman)'s lessons</a>
+	        	<section data-state="code">
+	    
 	        	</section>
 	        	<section>
 	        		The graphics pipeline <br>
@@ -118,11 +177,13 @@
 
 			<section>
 				2D Example (triangle)
+				<a href="../demo/triangle0.html"><img src="images/triangle.jpg" alt="simple triangle"></a>
 				<!-- (renderer + objects) -->
 			</section>
 
 			<section>
 				(triangle animated)
+				<a href="../demo/triangle.html"><img src="images/triangle.jpg" alt="animated triangle"></a>
 				<!-- (renderer + objects) -->
 			</section>
 
@@ -174,7 +235,10 @@
 		        	vertex + fragment shaders
 		        	<p class="fragment">The programable part of the pipeline</p>
 		        </section>
-		        <section>(greggman images)</section>
+		        <section>
+		        	<a href="http://games.greggman.com/game/webgl-how-it-works/">games.greggman.com/game/webgl-how-it-works/</a>
+		        	<a href="http://games.greggman.com/game/webgl-how-it-works/"><img src="images/vertex-shader-anim.gif" alt="vertex shader"></a>
+		        </section>
 	        </section>
 	        	
 	        <section>
@@ -183,12 +247,19 @@
 		        </section>
 		        <section>
 		        	load texture example
+		        	<a href="../demo/asaro.html"><img src="images/asaro.jpg" alt="head, textured"></a>
 		        </section>
 		        <section>
 		        	normals &amp; lighting example
+		        	<a href="../demo/asaro.html"><img src="images/bunny.jpg" alt="bunny, lit"></a>
+		        </section>
+		        <section>
+		        	other effects (wireframe)
+		        	<a href="../demo/asaro_wire.html"><img src="images/asaro_wire.jpg" alt="head, wireframe"></a>
 		        </section>
 		        <section>
 		        	other effects (toon)
+		        	<a href="../demo/bunny_pride.html"><img src="images/bunny_pride.jpg" alt="rainbow bunny"></a>
 		        </section>
 		    </section>
 
@@ -221,6 +292,7 @@
 
 		        <section>
 		        	<h2>art / demos</h2> 
+		        	<a href="../demo/bunny_pride.html"><img src="images/box_art.jpg" alt="rainbow boxes"></a>
 		        	particle effects
 		        </section>
 			</section>
@@ -259,11 +331,12 @@
 
 	</div>
 
-	<script src="js/reveal.min.js"></script>
+	<script src="js/libs/reveal.js"></script> <!-- .min -->
+	<script src="js/libs/plugins/head.min.js"></script> 
 	<script>
 
 		// see https://github.com/hakimel/reveal.js#configuration
-		Reveal.initialize({
+		Reveal.initialize ({
 			// Display controls in the bottom right corner
     		controls: true,
     		// Transition style
@@ -277,20 +350,26 @@
     		// Apply a 3D roll to links on hover
     		rollingLinks: false,
     		// Enable slide navigation via mouse wheel
-    		mouseWheel: false
+    		mouseWheel: false,
+
+    		dependencies: [
+		    //     // Syntax highlight for <code> elements
+		    	{ src: 'js/libs/plugins/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		    //     // Speaker notes
+		        { src: 'js/libs/plugins/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		    ]
 
 		});
 
-		// Reveal.addEventListener( 'section1go', function() {
-		//     if (typeof gl === 'undefined') {
-		//     	section1();
-		//     }
-		// }, false );
+		Reveal.addEventListener( 'slidechanged', function (event) {
+		    // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+		    console.log(event);
+		} );
 
 	</script>
 
 	<!-- section 1-->
-	<script type="text/javascript" src="js/webgl-utils.js"></script>
+	<script type="text/javascript" src="js/libs/webgl-utils.js"></script>
 	<script type="text/javascript" src="js/1_T.js"></script>
 	<script id="s1-vertex-shader" type="x-shader/x-vertex">
 	    attribute vec4 a_position;
