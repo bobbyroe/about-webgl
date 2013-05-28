@@ -19,7 +19,9 @@
 		.code .state-background {
 			background:url(images/shots/code.jpg) 50% 0 no-repeat #000;
 		}
-		
+		.fractal .state-background {
+			background:url(images/shots/fractal.jpg) 50% 0 no-repeat #000;
+		}
 		.black p {
 			color:#e0e0e0 !important;
 		}
@@ -81,25 +83,22 @@
 				    </aside>
 		        	<a href="http://www.gooengine.com/demofiles/pearl-boy/"><img src="images/blank.gif" alt="goo game"></a>
 		        </section>
-		        <section>
-		        	<a href="https://turbulenz.com/"><img src="images/shots/tz.jpg" alt="turbulenz"></a>
-		        </section>
-		        <section>
-		        	<a href="http://acko.net/files/on-webgl/whittaker/raytrace-creepy.html"><img src="images/shots/fractal.jpg" alt="fractal"></a>
+		        <section data-state="fractal">
+		        	<a href="http://acko.net/files/on-webgl/whittaker/raytrace-creepy.html"><img src="images/blank.gif" width="600" height="600" alt="fractal"></a>
 		        	<p>The web has a history of transformative changes. CSS gave us real web design, Flash gave us ubiquitous video, Firebug gave us Web Inspectors, jQuery gave us non-painful DOM manipulation, and so on. None of these ideas were new in computing when they debuted, the web merely adapted to fill a need. WebGL is an idea in a similar vein, a base platform for an ecosystem of specialized frameworks on top. - <a href="http://acko.net/blog/on-webgl/">Steven Wittens</a></p>
 		        </section>
 		    </section>
 
 			<section>
-				<h2 class="fragment">What it's not</h2>
-	        	<p>A 3D engine</p>
+				<p class="fragment">What it's not</p>
+	        	<h2>A 3D engine</h2>
 	        </section>
 
 	        <section>
 	        	<h2>Overview</h2>
 	        	<ul>
 	        		<li class="fragment">Intro to the WebGL DOM API</li>
-	        		<li class="fragment">2D / 3D, whatever</li>
+	        		<li class="fragment">2D / 3D; Whatever</li>
 	        		<li class="fragment">Bring your own matrices</li> <!-- blaze thru Greggman's stuff here -->
 		         	<li class="fragment">GLSL examples</li> <!-- my examples here -->
 		         	<li class="fragment">do stuff</li>
@@ -110,8 +109,10 @@
 			<!-- part 1 -->
 	        <section>
 	        	<h2>Intro</h2>
-	        	(much more involved than other other graphics libraries <br>
+	        	<aside class="notes">
+	        		(much more involved than other other graphics libraries <br>
 				massively parallel &amp; awesome)
+				</aside>
 	        </section>
 
 	        
@@ -121,8 +122,9 @@
 			    </aside>
 			    <a href="../demo/teapot.html"><img src="images/teapot.jpg" alt="Utah teapot"></a>
 				<p>2006</p>
-	        	<p class="fragment">(Photo of Vlad)</p>
-	        	<p class="fragment">(Photo of FF 4)</p>
+				<aside class="notes">
+		        	Vlad “Vukichivich” @ Mozilla creates a prototype OpenGL 3D context in a &lt;canvas&gtpipeelement, calls it Canvas 3D. Emphasis on portability.
+		        </aside>
 	        	
 	        </section>
 		       <!--  <section>
@@ -147,8 +149,7 @@
 	    
 	        	</section>
 	        	<section>
-	        		The graphics pipeline <br>
-	        		(diagram) - “more later”
+	        		<img src="images/pipeline.jpg" alt="simple pipeline">
 	        	</section>
 	        	<section>
 		        	an understanding of OpenGL ES 2.0 is helpful <br>
@@ -176,14 +177,16 @@
 	        </section>
 
 			<section>
-				2D Example (triangle)
+				
 				<a href="../demo/triangle0.html"><img src="images/triangle.jpg" alt="simple triangle"></a>
+				2D Example (triangle) <br>
 				<!-- (renderer + objects) -->
 			</section>
 
 			<section>
-				(triangle animated)
+				
 				<a href="../demo/triangle.html"><img src="images/triangle.jpg" alt="animated triangle"></a>
+				(triangle animated) <br>
 				<!-- (renderer + objects) -->
 			</section>
 
@@ -192,23 +195,26 @@
 			<!-- part 3 -->
 	        <section>
 	        	<h2>Bring your own matrices</h2>
-	        	<p class="fragment">4x4 matrix magic</p>
+	        	<aside class="notes">4x4 matrix magic</aside>
 	        	<!-- types &amp; operations: model, projection &amp; perspective (also identity) -->
 	        </section>
 
 	        <section>
 	        	<h2>model</h2>
 	        	translate + rotate + scale + multiply
+	        	(images of matrices)
 	        </section>
 
 	        <section>
 	        	<h2>projection</h2>
 	        	from pixels to clipspace
+	        	(show matrix)
 	        </section>
 
 	        <section>
 	        	<h2>perspective</h2>
 	        	fit visible world (frustum into clip space) (tangent)?
+	        	(show matrix)
 	        </section>
 
 
@@ -230,7 +236,9 @@
 	        </section>
 
 	        <section>
-	        	<section><h2>(pipeline)</h2></section>
+	        	<section>
+	        		<img src="images/pipeline.jpg" alt="simple pipeline">
+	        	</section>
 		        <section>
 		        	vertex + fragment shaders
 		        	<p class="fragment">The programable part of the pipeline</p>
