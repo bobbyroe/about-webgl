@@ -66,33 +66,33 @@
 		        		powerful tool for interactive storytelling
 				    </aside>
 					
-					<a href="http://www.ro.me/"><img src="images/shots/rome.jpg" alt="ro.me"></a>
+					<a target="_blank" href="http://www.ro.me/"><img src="images/shots/rome.jpg" alt="ro.me"></a>
 		        </section>
 		        <section data-state="globe">
 		        	<aside class="notes">
 				        visualisations
 				    </aside>
-		        	<a href="http://data-arts.appspot.com/globe/"><img src="images/blank.gif" width="800" height="800" alt="world population"></a>
+		        	<a target="_blank" href="http://data-arts.appspot.com/globe/"><img src="images/blank.gif" width="800" height="800" alt="world population"></a>
 		        </section>
 		        <section>		        	
-		        	<a href="http://open-3d-viewer.googlecode.com/svn/trunk/web/index.html#nav=2.83,4.78,197.5"><img src="images/shots/cow.jpg" alt="cow"></a>
+		        	<a target="_blank" href="http://open-3d-viewer.googlecode.com/svn/trunk/web/index.html#nav=2.83,4.78,197.5"><img src="images/shots/cow.jpg" alt="cow"></a>
 		        </section>
 		        <section data-state="goo_game">
 		        	<aside class="notes">
 				        games
 				    </aside>
-		        	<a href="http://www.gooengine.com/demofiles/pearl-boy/"><img src="images/blank.gif" alt="goo game"></a>
+		        	<a target="_blank" href="http://www.gooengine.com/demofiles/pearl-boy/"><img src="images/blank.gif" alt="goo game"></a>
 		        </section>
 		        <section data-state="fractal">
-		        	<a href="http://acko.net/files/on-webgl/whittaker/raytrace-creepy.html"><img src="images/blank.gif" width="600" height="600" alt="fractal"></a>
-		        	<p>The web has a history of transformative changes. CSS gave us real web design, Flash gave us ubiquitous video, Firebug gave us Web Inspectors, jQuery gave us non-painful DOM manipulation, and so on. None of these ideas were new in computing when they debuted, the web merely adapted to fill a need. WebGL is an idea in a similar vein, a base platform for an ecosystem of specialized frameworks on top. - <a href="http://acko.net/blog/on-webgl/">Steven Wittens</a></p>
+		        	<a target="_blank" href="http://acko.net/files/on-webgl/whittaker/raytrace-creepy.html"><img src="images/blank.gif" width="600" height="600" alt="fractal"></a>
+		        	<p>The web has a history of transformative changes. CSS gave us real web design, Flash gave us ubiquitous video, Firebug gave us Web Inspectors, jQuery gave us non-painful DOM manipulation, and so on. None of these ideas were new in computing when they debuted, the web merely adapted to fill a need. WebGL is an idea in a similar vein, a base platform for an ecosystem of specialized frameworks on top. - <a target="_blank" href="http://acko.net/blog/on-webgl/">Steven Wittens</a></p>
 		        </section>
 		    </section>
 
-			<section>
+			<!-- <section>
 				<p class="fragment">What it's not</p>
 	        	<h2>A 3D engine</h2>
-	        </section>
+	        </section> -->
 
 	        <section>
 	        	<h2>Overview</h2>
@@ -120,10 +120,10 @@
 				<aside class="notes">
 			       lightning history
 			    </aside>
-			    <a href="../demo/teapot.html"><img src="images/teapot.jpg" alt="Utah teapot"></a>
+			    <a target="_blank" href="../demos/3_teapot/"><img src="images/teapot.jpg" alt="Utah teapot"></a>
 				<p>2006</p>
 				<aside class="notes">
-		        	Vlad “Vukichivich” @ Mozilla creates a prototype OpenGL 3D context in a &lt;canvas&gtpipeelement, calls it Canvas 3D. Emphasis on portability.
+		        	Vlad “Vukichivich” @ Mozilla creates a prototype OpenGL 3D context in a &lt;canvas&gt; - calls it Canvas 3D. Emphasis on portability.
 		        </aside>
 	        	
 	        </section>
@@ -168,56 +168,53 @@
 	        	<h2>2D / 3D; whatever</h2>
 	        </section>
 
-	     	<section>
-	        	<h2>basic workflow</h2>
-	        	<p class="fragment">get a context</p>
-	        	<p class="fragment">create *shaders &amp; program</p>
-	        	<p class="fragment">VBOs (&amp; IBOs)</p>
-	        	<p class="fragment">draw</p>
-	        </section>
+	     	
 
 			<section>
-				
-				<a href="../demo/triangle0.html"><img src="images/triangle.jpg" alt="simple triangle"></a>
-				2D Example (triangle) <br>
-				<!-- (renderer + objects) -->
-			</section>
+				<section>
+				   	<h2>basic workflow</h2>
+				   	<p class="fragment">get a context</p>
+				   	<p class="fragment">create *shaders &amp; program</p>
+				   	<p class="fragment">VBOs (&amp; IBOs)</p>
+				   	<p class="fragment">draw</p>
+				   </section>
+				<section>
+					<a target="_blank" href="../demos/0_triangle.html"><img src="images/shots/triangle.jpg" alt="simple triangle"></a> <br>
+					<p>2D Example (triangle)</p>
+					<!-- (renderer + objects) -->
+				</section>
 
-			<section>
-				
-				<a href="../demo/triangle.html"><img src="images/triangle.jpg" alt="animated triangle"></a>
-				(triangle animated) <br>
-				<!-- (renderer + objects) -->
+				<section data-state="black">
+					<a target="_blank" href="../demos/1_triangle/"><img src="images/triangle.jpg" alt="animated triangle"></a> <br>
+					<p>(triangle animated)</p>
+					<!-- (renderer + objects) -->
+				</section>
 			</section>
 
 
 
 			<!-- part 3 -->
-	        <section>
-	        	<h2>Bring your own matrices</h2>
-	        	<aside class="notes">4x4 matrix magic</aside>
-	        	<!-- types &amp; operations: model, projection &amp; perspective (also identity) -->
-	        </section>
+			 <section>
+		        <section>
+		        	<h2>Bring your own matrices</h2>
+		        	<aside class="notes">4x4 matrix magic</aside>
+		        	<!-- types &amp; operations: model, projection &amp; perspective (also identity) -->
+		        </section>
 
-	        <section>
-	        	<h2>model</h2>
-	        	translate + rotate + scale + multiply
-	        	(images of matrices)
-	        </section>
+		        <section>
+		        	<h2>model</h2>
+		        	<img src="images/shots/model_matrices.jpg" alt="Model Matrices">
+		        </section>
 
-	        <section>
-	        	<h2>projection</h2>
-	        	from pixels to clipspace
-	        	(show matrix)
-	        </section>
+		        <section>
+		        	<h2>projection &amp; perspective</h2>
+		        	
+		        	<img src="images/shots/projection_perspective.jpg" alt="projection + perspective Matrices">
+		        	<aside class="notes">from pixels to clipspace to perspective</aside>
+		        </section>
+		    </section>
 
-	        <section>
-	        	<h2>perspective</h2>
-	        	fit visible world (frustum into clip space) (tangent)?
-	        	(show matrix)
-	        </section>
-
-
+	       
 
 			<!-- part 4 -->
 	        <section>
@@ -229,13 +226,12 @@
 	        </section>
 
 	        <section>
-	        	<h2>what is it?</h2>
-	        	like c / c++ with helpers for CG <br>
-	        	<p class="fragment">(built-in matrices / vectors / functions)</p>
-	        	<p class="fragment">gl_Position &amp; gl_FragColor</p>
-	        </section>
-
-	        <section>
+	        	<section>
+	        		<h2>what is it?</h2>
+	        		like c / c++ with helpers for CG <br>
+	        		<p class="fragment">(built-in matrices / vectors / functions)</p>
+	        		<p class="fragment">gl_Position &amp; gl_FragColor</p>
+	        	</section>
 	        	<section>
 	        		<img src="images/pipeline.jpg" alt="simple pipeline">
 	        	</section>
@@ -244,30 +240,30 @@
 		        	<p class="fragment">The programable part of the pipeline</p>
 		        </section>
 		        <section>
-		        	<a href="http://games.greggman.com/game/webgl-how-it-works/">games.greggman.com/game/webgl-how-it-works/</a>
-		        	<a href="http://games.greggman.com/game/webgl-how-it-works/"><img src="images/vertex-shader-anim.gif" alt="vertex shader"></a>
+		        	<a target="_blank" href="http://games.greggman.com/game/webgl-how-it-works/">games.greggman.com/game/webgl-how-it-works/</a>
+		        	<a target="_blank" href="http://games.greggman.com/game/webgl-how-it-works/"><img src="images/vertex-shader-anim.gif" alt="vertex shader"></a>
 		        </section>
 	        </section>
 	        	
 	        <section>
 		        <section>
-		        	(texture coords, normals &amp; lighting)
+		        	(textures, normals &amp; lighting)
 		        </section>
-		        <section>
-		        	load texture example
-		        	<a href="../demo/asaro.html"><img src="images/asaro.jpg" alt="head, textured"></a>
+		        <section data-state="black">
+		        	<a target="_blank" href="../demos/4_shaders/textured.html"><img src="images/asaro.jpg" alt="head, textured"></a> <br>
+		        	<p>load texture example</p>    	
 		        </section>
-		        <section>
-		        	normals &amp; lighting example
-		        	<a href="../demo/asaro.html"><img src="images/bunny.jpg" alt="bunny, lit"></a>
+		        <section data-state="black">
+		        	<a target="_blank" href="../demos/5_bunny/bunny.html"><img src="images/bunny.jpg" alt="bunny, lit"></a> <br>
+		        	<p>normals &amp; lighting example</p>
 		        </section>
-		        <section>
-		        	other effects (wireframe)
-		        	<a href="../demo/asaro_wire.html"><img src="images/asaro_wire.jpg" alt="head, wireframe"></a>
+		        <section data-state="black">
+		        	<a target="_blank" href="../demos/4_shaders/asaro_wire.html"><img src="images/asaro_wire.jpg" alt="head, wireframe"></a> <br>
+		        	<p>other effects (wireframe)</p>
 		        </section>
-		        <section>
-		        	other effects (toon)
-		        	<a href="../demo/bunny_pride.html"><img src="images/bunny_pride.jpg" alt="rainbow bunny"></a>
+		        <section data-state="black">
+		        	<a target="_blank" href="../demos/4_shaders/predator.html"><img src="images/bunny_pride.jpg" alt="rainbow bunny"></a> <br>
+		        	<p>other effects (toon)</p>
 		        </section>
 		    </section>
 
@@ -286,9 +282,23 @@
 		        </section>
 		        
 		        <section>
-		        	Use <a href="http://threejs.org/">Three.js</a>
+		        	Use <a target="_blank" href="http://threejs.org/">Three.js</a>
 		        </section>
+				
+				<section data-state="black">
+		        	<a target="_blank" href="../three/2_emoji/"><img src="images/shots/emoji.jpg" alt="emoji"></a>
+		        </section>
+
+		        <section data-state="black">
+		        	<a target="_blank" href="../three/3_stuff/"><img src="images/shots/stuff.jpg" alt="stuff"></a>
+		        </section>
+
 		        <section>
+		        	<a target="_blank" href="../three/7_Tree_3D_flowers/anim.html"><img src="images/shots/tree.jpg" alt="a tree"></a>
+		        </section>
+
+
+		        <!-- <section>
 		        	<h2>Storytelling &amp; presentation</h2> 
 		        	visualisations, image processing
 		        </section>
@@ -300,9 +310,9 @@
 
 		        <section>
 		        	<h2>art / demos</h2> 
-		        	<a href="../demo/bunny_pride.html"><img src="images/box_art.jpg" alt="rainbow boxes"></a>
+		        	<a target="_blank" href="../demo/bunny_pride.html"><img src="images/box_art.jpg" alt="rainbow boxes"></a>
 		        	particle effects
-		        </section>
+		        </section> -->
 			</section>
 
 
@@ -311,11 +321,11 @@
 	        <section>
 		        <h2>links</h2>
 		        <ul>
-		           <li>watch these: <a href="https://www.udacity.com/course/cs291">www.udacity.com/course/cs291</a></li>
-		           <li>and this: <a href="http://games.greggman.com/game/webgl-how-it-works">games.greggman.com/game/webgl-how-it-works</a></li>
-		           <li><a href="http://learningwebgl.com/blog/?page_id=1217">learningwebgl.com/blog/?page_id=1217</a></li>
-		           <li><a href="https://www.shadertoy.com">www.shadertoy.com</a></li>
-		           <li><a href="http://acko.net/blog/making-mathbox">acko.net/blog/making-mathbox</a> (webgl usage)</li>
+		           <li>watch these: <a target="_blank" href="https://www.udacity.com/course/cs291">www.udacity.com/course/cs291</a></li>
+		           <li>and this: <a target="_blank" href="http://games.greggman.com/game/webgl-how-it-works">games.greggman.com/game/webgl-how-it-works</a></li>
+		           <li><a target="_blank" href="http://learningwebgl.com/blog/?page_id=1217">learningwebgl.com/blog/?page_id=1217</a></li>
+		           <li><a target="_blank" href="https://www.shadertoy.com">www.shadertoy.com</a></li>
+		           <li><a target="_blank" href="http://acko.net/blog/making-mathbox">acko.net/blog/making-mathbox</a> (webgl usage)</li>
 		       </ul>
 	        </section>
 
@@ -333,7 +343,7 @@
 
 	        <section>
 		        <h2>Thank You</h2>
-		        <a href="#/">back to intro</a>
+		        <a target="_blank" href="#/">back to intro</a>
 	        </section>
 	    </div>
 
