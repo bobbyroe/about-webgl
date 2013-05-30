@@ -5,11 +5,16 @@
     <title>About WebGL</title>
     <link rel="stylesheet" href="css/reveal.min.css">
 	<link rel="stylesheet" href="css/theme/simple.css" id="theme">
-	
+
 	<style type="text/css">
-		section[data-state=section1go] canvas {
-			background-color: rgba(255, 255, 255, 1.0) !important;
+		section[data-state=fractal] p {
+            font-style: italic;
+			color: #e0e0e0;
 		}
+        section[data-state=fractal] p a {
+            font-style: none;
+            color: #00ccFF !important;
+        }
 		.globe .state-background {
 			background:url(images/shots/globe.jpg) 50% 0 no-repeat #000;
 		}
@@ -17,10 +22,13 @@
 			background:url(images/shots/goo.jpg) 50% 0 no-repeat #000;
 		}
 		.code .state-background {
-			background:url(images/shots/code.jpg) 50% 0 no-repeat #000;
+			background:url(images/shots/code.jpg) 50% 50% no-repeat #000;
 		}
 		.fractal .state-background {
 			background:url(images/shots/fractal.jpg) 50% 0 no-repeat #000;
+		}
+		.pipeline .state-background {
+			background:url(images/pipeline.jpg) 50% 50% no-repeat #FFF;
 		}
 		.black p {
 			color:#e0e0e0 !important;
@@ -36,9 +44,9 @@
 			box-shadow:none;
 		}
 	</style>
-	
+
 </head>
-<body onload="section1();">
+<body onload="T.go();">
 	<div class="reveal">
 	    <div class="slides">
 	        <section data-state="section1go">
@@ -46,7 +54,7 @@
 	        	<canvas id="1" width="500" height="500"></canvas>
 	        	Bobby Roe
 	        </section>
-			
+
 			<section>
 	        	<!-- (Demo Reel) -->
 	        	<iframe src="http://player.vimeo.com/video/15575038" width="800" height="448" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
@@ -60,12 +68,10 @@
 
 			<section>
 				<section>
-		        	
 					<aside class="notes">
 				        what you can do with it <br>
 		        		powerful tool for interactive storytelling
 				    </aside>
-					
 					<a target="_blank" href="http://www.ro.me/"><img src="images/shots/rome.jpg" alt="ro.me"></a>
 		        </section>
 		        <section data-state="globe">
@@ -74,7 +80,7 @@
 				    </aside>
 		        	<a target="_blank" href="http://data-arts.appspot.com/globe/"><img src="images/blank.gif" width="800" height="800" alt="world population"></a>
 		        </section>
-		        <section>		        	
+		        <section>
 		        	<a target="_blank" href="http://open-3d-viewer.googlecode.com/svn/trunk/web/index.html#nav=2.83,4.78,197.5"><img src="images/shots/cow.jpg" alt="cow"></a>
 		        </section>
 		        <section data-state="goo_game">
@@ -84,8 +90,8 @@
 		        	<a target="_blank" href="http://www.gooengine.com/demofiles/pearl-boy/"><img src="images/blank.gif" alt="goo game"></a>
 		        </section>
 		        <section data-state="fractal">
-		        	<a target="_blank" href="http://acko.net/files/on-webgl/whittaker/raytrace-creepy.html"><img src="images/blank.gif" width="600" height="600" alt="fractal"></a>
-		        	<p>The web has a history of transformative changes. CSS gave us real web design, Flash gave us ubiquitous video, Firebug gave us Web Inspectors, jQuery gave us non-painful DOM manipulation, and so on. None of these ideas were new in computing when they debuted, the web merely adapted to fill a need. WebGL is an idea in a similar vein, a base platform for an ecosystem of specialized frameworks on top. - <a target="_blank" href="http://acko.net/blog/on-webgl/">Steven Wittens</a></p>
+		        	<!-- <a target="_blank" href="http://acko.net/files/on-webgl/whittaker/raytrace-creepy.html"><img src="images/blank.gif" width="600" height="600" alt="fractal"></a> -->
+		        	<p>"The web has a history of transformative changes. <br> CSS gave us real web design, Flash gave us ubiquitous video, Firebug gave us Web Inspectors, jQuery gave us non-painful DOM manipulation, and so on. None of these ideas were new in computing when they debuted, the web merely adapted to fill a need. WebGL is an idea in a similar vein, a base platform for an ecosystem of specialized frameworks on top." - <a target="_blank" href="http://acko.net/blog/on-webgl/">Steven Wittens</a></p>
 		        </section>
 		    </section>
 
@@ -111,21 +117,20 @@
 	        	<h2>Intro</h2>
 	        	<aside class="notes">
 	        		(much more involved than other other graphics libraries <br>
-				massively parallel &amp; awesome)
+				working with the massively parallel GPU is awesome)
 				</aside>
 	        </section>
 
-	        
+
 			<section data-state="black">
-				<aside class="notes">
-			       lightning history
-			    </aside>
-			    <a target="_blank" href="../demos/3_teapot/"><img src="images/teapot.jpg" alt="Utah teapot"></a>
+				
+			    <a target="_blank" href="../demos/texture_color.html"><img src="images/teapot.jpg" alt="Utah teapot"></a>
 				<p>2006</p>
 				<aside class="notes">
+					lightning history: <br>
 		        	Vlad “Vukichivich” @ Mozilla creates a prototype OpenGL 3D context in a &lt;canvas&gt; - calls it Canvas 3D. Emphasis on portability.
 		        </aside>
-	        	
+
 	        </section>
 		       <!--  <section>
 					<p>2009</p>
@@ -146,10 +151,7 @@
 	        		needs better debugging tools
 	        	</section> -->
 	        	<section data-state="code">
-	    
-	        	</section>
-	        	<section>
-	        		<img src="images/pipeline.jpg" alt="simple pipeline">
+
 	        	</section>
 	        	<section>
 		        	an understanding of OpenGL ES 2.0 is helpful <br>
@@ -157,8 +159,8 @@
 	        	</section>
 	        	<section>
 	        		<p>Essentials of 3D Graphics</p>
-	        		<a class="fragment" href="https://www.udacity.com/course/cs291">Eric Haines Class on Udacity</a>
-	        	</section>	
+	        		<a class="fragment" href="https://www.udacity.com/course/cs291" target="_blank">Eric Haines Class on Udacity</a>
+	        	</section>
 	        </section>
 
 
@@ -168,7 +170,7 @@
 	        	<h2>2D / 3D; whatever</h2>
 	        </section>
 
-	     	
+
 
 			<section>
 				<section>
@@ -208,20 +210,23 @@
 
 		        <section>
 		        	<h2>projection &amp; perspective</h2>
-		        	
+
 		        	<img src="images/shots/projection_perspective.jpg" alt="projection + perspective Matrices">
-		        	<aside class="notes">from pixels to clipspace to perspective</aside>
+		        	<aside class="notes">
+                        from pixels to clipspace to perspective <br>
+
+                    </aside>
 		        </section>
 		    </section>
 
-	       
+
 
 			<!-- part 4 -->
 	        <section>
 	        	<h2>GLSL</h2>
 	        	<p class="fragment">some examples</p>
-	        	<p class="fragment">the programmable part of the GL pipeline <br>
-				this is where the magic is</p>
+	        	<p class="fragment">the programmable part of the GL pipeline</p>
+	        	<aside class="notes">this is where the magic is</aside>
 
 	        </section>
 
@@ -232,8 +237,8 @@
 	        		<p class="fragment">(built-in matrices / vectors / functions)</p>
 	        		<p class="fragment">gl_Position &amp; gl_FragColor</p>
 	        	</section>
-	        	<section>
-	        		<img src="images/pipeline.jpg" alt="simple pipeline">
+	        	<section data-state="pipeline">
+	        		<!-- <img src="images/pipeline.jpg" alt="simple pipeline"> -->
 	        	</section>
 		        <section>
 		        	vertex + fragment shaders
@@ -244,25 +249,27 @@
 		        	<a target="_blank" href="http://games.greggman.com/game/webgl-how-it-works/"><img src="images/vertex-shader-anim.gif" alt="vertex shader"></a>
 		        </section>
 	        </section>
-	        	
+
 	        <section>
 		        <section>
-		        	(textures, normals &amp; lighting)
+                    Vectors in action <br>
+		        	normals &amp; lighting
+
 		        </section>
 		        <section data-state="black">
-		        	<a target="_blank" href="../demos/4_shaders/textured.html"><img src="images/asaro.jpg" alt="head, textured"></a> <br>
-		        	<p>load texture example</p>    	
-		        </section>
-		        <section data-state="black">
-		        	<a target="_blank" href="../demos/5_bunny/bunny.html"><img src="images/bunny.jpg" alt="bunny, lit"></a> <br>
+		        	<a target="_blank" href="../demos/lambert.html"><img src="images/bunny.jpg" alt="bunny, lit"></a> <br>
 		        	<p>normals &amp; lighting example</p>
 		        </section>
 		        <section data-state="black">
-		        	<a target="_blank" href="../demos/4_shaders/asaro_wire.html"><img src="images/asaro_wire.jpg" alt="head, wireframe"></a> <br>
+		        	<a target="_blank" href="../demos/wireframe.html"><img src="images/asaro_wire.jpg" alt="head, wireframe"></a> <br>
 		        	<p>other effects (wireframe)</p>
 		        </section>
+                <section data-state="black">
+                    <a target="_blank" href="../demos/textured.html"><img src="images/asaro.jpg" alt="head, textured"></a> <br>
+                    <p>load texture example</p>
+                </section>
 		        <section data-state="black">
-		        	<a target="_blank" href="../demos/4_shaders/predator.html"><img src="images/bunny_pride.jpg" alt="rainbow bunny"></a> <br>
+		        	<a target="_blank" href="../demos/predator.html"><img src="images/bunny_pride.jpg" alt="rainbow bunny"></a> <br>
 		        	<p>other effects (toon)</p>
 		        </section>
 		    </section>
@@ -278,13 +285,10 @@
 			<section>
 		        <section>
 	        		<h2>Do stuff</h2>
-		        	<p class="fragment">“WebGL can make graphics &amp; interactive and introspective by default.” - acko.net</p>
+		        	<aside class="notes">“WebGL can make graphics &amp; interactive and introspective by default.” - acko.net</aside>
+                    <p class="fragment">Use <a target="_blank" href="http://threejs.org/">Three.js</a></p>
 		        </section>
-		        
-		        <section>
-		        	Use <a target="_blank" href="http://threejs.org/">Three.js</a>
-		        </section>
-				
+
 				<section data-state="black">
 		        	<a target="_blank" href="../three/2_emoji/"><img src="images/shots/emoji.jpg" alt="emoji"></a>
 		        </section>
@@ -299,7 +303,7 @@
 
 
 		        <!-- <section>
-		        	<h2>Storytelling &amp; presentation</h2> 
+		        	<h2>Storytelling &amp; presentation</h2>
 		        	visualisations, image processing
 		        </section>
 
@@ -309,7 +313,7 @@
 		        </section>
 
 		        <section>
-		        	<h2>art / demos</h2> 
+		        	<h2>art / demos</h2>
 		        	<a target="_blank" href="../demo/bunny_pride.html"><img src="images/box_art.jpg" alt="rainbow boxes"></a>
 		        	particle effects
 		        </section> -->
@@ -343,14 +347,14 @@
 
 	        <section>
 		        <h2>Thank You</h2>
-		        <a target="_blank" href="#/">back to intro</a>
+		        <a href="#/">back to intro</a>
 	        </section>
 	    </div>
 
 	</div>
 
 	<script src="js/libs/reveal.js"></script> <!-- .min -->
-	<script src="js/libs/plugins/head.min.js"></script> 
+	<script src="js/libs/plugins/head.min.js"></script>
 	<script>
 
 		// see https://github.com/hakimel/reveal.js#configuration
@@ -381,9 +385,13 @@
 
 		Reveal.addEventListener( 'slidechanged', function (event) {
 		    // event.previousSlide, event.currentSlide, event.indexh, event.indexv
-		    console.log(event);
+		    // console.log(event);
+            if (event.indexh !== 0) {
+               T.stop();
+            } else {
+                T.go();
+            }
 		} );
-
 	</script>
 
 	<!-- section 1-->
