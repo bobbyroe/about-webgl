@@ -4,6 +4,13 @@
 About WebGL Talk.
 [Presentation](http://bobbyroe.com/wgl/about)
 
+* Intro to the WebGL DOM API
+* 2D / 3D; Whatever
+* Bring your own matrices 
+* GLSL examples 
+* do stuff
+* references
+
 ###Init WebGL example
 
 ```js

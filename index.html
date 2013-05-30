@@ -95,11 +95,6 @@
 		        </section>
 		    </section>
 
-			<!-- <section>
-				<p class="fragment">What it's not</p>
-	        	<h2>A 3D engine</h2>
-	        </section> -->
-
 	        <section>
 	        	<h2>Overview</h2>
 	        	<ul>
@@ -112,6 +107,8 @@
 	         	</ul>
 	        </section>
 
+
+
 			<!-- part 1 -->
 	        <section>
 	        	<h2>Intro</h2>
@@ -123,22 +120,14 @@
 
 
 			<section data-state="black">
-				
 			    <a target="_blank" href="../demos/texture_color.html"><img src="images/teapot.jpg" alt="Utah teapot"></a>
 				<p>2006</p>
 				<aside class="notes">
 					lightning history: <br>
 		        	Vlad “Vukichivich” @ Mozilla creates a prototype OpenGL 3D context in a &lt;canvas&gt; - calls it Canvas 3D. Emphasis on portability.
 		        </aside>
-
 	        </section>
-		       <!--  <section>
-					<p>2009</p>
-		        	<p class="fragment">(Photo of Khronos)</p>
-		        	<p class="fragment">(Photo of Chrome body)</p>
-		        	<p class="fragment">(Photo of Three.js)</p>
-		        </section> -->
-
+		
 	        <section>
 	        	<section>
 	        		<h2>some concepts</h2>
@@ -147,15 +136,12 @@
 	        		It's NOT simple like &lt;canvas&gt; <br>
 	        		ex: context.drawThis(); // done.
 	        	</section>
-	        	<!-- <section>
-	        		needs better debugging tools
-	        	</section> -->
 	        	<section data-state="code">
 
 	        	</section>
 	        	<section>
 		        	an understanding of OpenGL ES 2.0 is helpful <br>
-		        	• buffers, switches, state, load-compile-link-use, etc …
+		        	• buffers, state, load-compile-link-use, etc ...
 	        	</section>
 	        	<section>
 	        		<p>Essentials of 3D Graphics</p>
@@ -169,8 +155,6 @@
 	        <section>
 	        	<h2>2D / 3D; whatever</h2>
 	        </section>
-
-
 
 			<section>
 				<section>
@@ -200,7 +184,6 @@
 		        <section>
 		        	<h2>Bring your own matrices</h2>
 		        	<aside class="notes">4x4 matrix magic</aside>
-		        	<!-- types &amp; operations: model, projection &amp; perspective (also identity) -->
 		        </section>
 
 		        <section>
@@ -236,9 +219,14 @@
 	        		like c / c++ with helpers for CG <br>
 	        		<p class="fragment">(built-in matrices / vectors / functions)</p>
 	        		<p class="fragment">gl_Position &amp; gl_FragColor</p>
+	        		<aside class="notes"> 
+	        			ex functions: dot(), reflect(), br
+	        			supports swizzles (.xy, .rgb, etc ...) <br>
+	        			some limitations: no non-constant loop iterators <br>
+	        				no recursive functions: GLSL can make them inline <br>
+	        		</aside>
 	        	</section>
 	        	<section data-state="pipeline">
-	        		<!-- <img src="images/pipeline.jpg" alt="simple pipeline"> -->
 	        	</section>
 		        <section>
 		        	vertex + fragment shaders
@@ -254,7 +242,6 @@
 		        <section>
                     Vectors in action <br>
 		        	normals &amp; lighting
-
 		        </section>
 		        <section data-state="black">
 		        	<a target="_blank" href="../demos/lambert.html"><img src="images/bunny.jpg" alt="bunny, lit"></a> <br>
@@ -276,7 +263,8 @@
 
 	        <section>
 	        	poor error feedback <br>
-	        	ex: does not like to mix ints &amp; floats
+	        	ex: does not like to mix ints &amp; floats <br>
+	        	will quietly take an empty buffer and fail.
 	        </section>
 
 
@@ -299,24 +287,7 @@
 
 		        <section>
 		        	<a target="_blank" href="../three/7_Tree_3D_flowers/anim.html"><img src="images/shots/tree.jpg" alt="a tree"></a>
-		        </section>
-
-
-		        <!-- <section>
-		        	<h2>Storytelling &amp; presentation</h2>
-		        	visualisations, image processing
-		        </section>
-
-		        <section>
-		        	<h2>games</h2>
-		        	ray casting / clickable objects, physics
-		        </section>
-
-		        <section>
-		        	<h2>art / demos</h2>
-		        	<a target="_blank" href="../demo/bunny_pride.html"><img src="images/box_art.jpg" alt="rainbow boxes"></a>
-		        	particle effects
-		        </section> -->
+		        </section>		      
 			</section>
 
 
@@ -375,9 +346,9 @@
     		mouseWheel: false,
 
     		dependencies: [
-		    //     // Syntax highlight for <code> elements
+		        // Syntax highlight for <code> elements
 		    	{ src: 'js/libs/plugins/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-		    //     // Speaker notes
+		        // Speaker notes
 		        { src: 'js/libs/plugins/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 		    ]
 
@@ -389,7 +360,7 @@
             if (event.indexh !== 0) {
                T.stop();
             } else {
-                T.go();
+               T.go();
             }
 		} );
 	</script>
@@ -400,11 +371,9 @@
 	<script id="s1-vertex-shader" type="x-shader/x-vertex">
 	    attribute vec4 a_position;
 	    attribute vec2 a_tex_coord;
-	    // attribute vec4 a_color;
 
 	    uniform mat4 u_matrix;
 
-	    // varying vec4 v_color;
 	    varying vec2 v_texture_coord;
 
 	    void main() {
@@ -421,7 +390,6 @@
 
 	    uniform sampler2D u_sampler;
 
-	    // varying vec4 v_color;
 	    varying vec2 v_texture_coord;
 
 	    void main() {
